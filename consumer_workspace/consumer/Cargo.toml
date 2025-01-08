@@ -1,0 +1,19 @@
+[package]
+name = "consumer"
+version = "0.1.0"
+edition = "2021"
+
+include=["resources/*.json"]
+
+[package.metadata.zksync_error_codegen]
+json_files = ["resources/errors.json"]
+
+
+[dependencies]
+provider1 = { path = "../../provider1" }
+provider_root = { path = "../../provider_root" }
+zksync_error =  { path = "../zksync_error" }
+
+
+[build-dependencies]
+zksync-error-codegen = { git = "https://github.com/sayon/error-codegen-poc", branch = "cargo-dep-control" }

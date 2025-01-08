@@ -1,0 +1,11 @@
+[package]
+name = "provider_root"
+version = "0.1.0"
+edition = "2021"
+
+include = ["resources/*.json"]
+
+[package.metadata.zksync_error_codegen]
+json_files = ["resources/errors.json"]
+
+[dependencies]

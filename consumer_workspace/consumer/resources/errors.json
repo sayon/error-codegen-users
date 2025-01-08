@@ -1,0 +1,72 @@
+{
+    "types": [],
+    "domains": [
+        {
+            "domain_name": "core",
+            "domain_code": 2,
+            "identifier_encoding": "core",
+            "bindings": {
+                "rust": "Core"
+            },
+            "components" : [
+                {
+                    "component_name": "sequencer",
+                    "component_code": 1,
+                    "identifier_encoding": "seq",
+
+                    "bindings": {
+                        "rust": "Sequencer"
+                    },
+                    "errors": [
+
+                        {
+                            "name": "OtherCoreError",
+                            "code": 2,
+                            "message": "Tratata {path}",
+                            "bindings": {
+                                "rust":
+                                {
+                                    "name": "OtherCoreError"
+                                }
+                            },
+                            "fields": [
+                                {
+                                    "name": "path",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "payload",
+                                    "type": "uint"
+                                }
+
+                            ]
+                        },
+
+                        {
+                            "name": "ThirdCoreError",
+                            "code": 3,
+                            "message": "Third core error, oh no! {string_param}",
+                            "bindings": {
+                                "rust":
+                                {
+                                    "name": "ThirdCoreError"
+                                }
+                            },
+                            "fields": [
+                                {
+                                    "name": "string_param",
+                                    "type": "string"
+                                },
+                                {
+                                    "name": "uint_param",
+                                    "type": "uint"
+                                }
+
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
