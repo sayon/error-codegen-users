@@ -12,7 +12,7 @@ json_files = ["resources/errors.json"]
 [dependencies]
 provider1 = { git = "https://github.com/sayon/error-codegen-users", branch = "main" }
 provider_root = { path = "../../provider_root" }
-zksync_error =  { path = "../zksync_error" }
+zksync_error =  { path = "../zksync_error" , features = ["documentation"] }
 
 [build-dependencies]
 zksync-error-codegen = { git = "https://github.com/sayon/error-codegen-poc", branch = "cargo-dep-control" }
